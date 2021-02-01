@@ -1,0 +1,35 @@
+<!DOCTYPE html> {% load staticfiles %}
+
+<html>
+
+<head>
+    <title>SGICE</title>
+    <link rel='stylesheet' href='{% static "css/form.css" %}' />
+    
+</head>
+
+<body>
+    {% include "django/cabecalho.html" %}
+
+    <div class="container">
+	
+		<form class="form-signin">
+		    <h2 class="form-signin-heading">Cadastrar Disciplina</h2>
+		    <label for="nome" class="sr-only">Nome:</label>
+		    <input type="text" id="nome_disciplina" class="form-control" placeholder="Nome" required autofocus>
+		    <br>
+		    <label for="endereco" class="sr-only">Código:</label>
+		    <input type="text" id="codigo_disciplina" class="form-control" placeholder="Código" required>
+		    <br>
+		    <label for="cpf" class="sr-only">Descrição</label>
+		    <input type="text" id="descricao_disciplina" class="form-control" placeholder="Descrição" required>
+		    <br>
+		    <label for="cpf" class="sr-only">Horário</label>
+		    <input type="text" id="horario_disciplina" class="form-control" placeholder="Horário" required>
+		    <br>
+		    <button class="btn btn-success" type="submit">Cadastrar</button>
+		</form>
+    </div>
+</body>
+
+</html>
