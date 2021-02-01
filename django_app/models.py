@@ -16,6 +16,17 @@ class Blog(models.Model):
     @permalink
     def get_url_absoluta(self):
         return ('ver_post_blog', None, { 'slug': self.url })
+        
+class Categoria(models.Model):
+    titulo = models.CharField(max_length=100, db_index=True)
+    url = models.SlugField(max_length=100, db_index=True)
+
+    def __unicode__(self):
+        return '%s' % self.titulo
+
+    @permalink
+    def get_url_absoluta(self):
+        return ('ver_categoria_blog', None, { 'slug': self.url })
 
 class Aluno(models.Model):
     titulo = models.CharField(max_length=100, db_index=True)

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django_app.models import Blog, Categoria
+from django_app.models import Blog, Categoria, Aluno, Professor, Disciplina
 
 class BlogAdmin(admin.ModelAdmin):
     exclude = ['data']
