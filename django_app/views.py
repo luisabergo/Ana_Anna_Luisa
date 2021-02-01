@@ -17,3 +17,6 @@ def CadastroDisciplina(request):
     
 def login(request):
     return render(request, 'django/login.html')
+
+def ajuda(request):
+    return render(request, 'django/ajuda.html')

@@ -22,5 +22,6 @@ urlpatterns = [
   url(r'^CadastroProfessor/', views.CadastroProfessor, name='CadastroProfessor'),
   url(r'^CadastroDisciplina/', views.CadastroDisciplina, name='CadastroDisciplina'),
   url(r'^login/', views.login, name='login'),
+  url(r'^ajuda/', views.ajuda, name='ajuda'),
 
 ]
