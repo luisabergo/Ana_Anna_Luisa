@@ -14,3 +14,6 @@ def CadastroAluno(request):
 
 def CadastroDisciplina(request):
     return render(request, 'django/CadastroDisciplina.html')
+    
+def login(request):
+    return render(request, 'django/login.html')
