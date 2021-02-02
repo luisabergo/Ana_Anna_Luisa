@@ -23,5 +23,6 @@ urlpatterns = [
   url(r'^CadastroDisciplina/', views.CadastroDisciplina, name='CadastroDisciplina'),
   url(r'^login/', views.login, name='login'),
   url(r'^ajuda/', views.ajuda, name='ajuda'),
+  url(r'^chat/', views.chat, name='chat'),
 
 ]

@@ -20,3 +20,6 @@ def login(request):
 
 def ajuda(request):
     return render(request, 'django/ajuda.html')
+
+def chat(request):
+    return render(request, 'django/chat.html')
