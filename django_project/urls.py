@@ -21,10 +21,9 @@ urlpatterns = [
   url(r'^django_app/', include('django_app.urls')),
   url(r'^CadastroProfessor/', views.CadastroUsuario, name='CadastroUsuario'),
   url(r'^CadastroDisciplina/', views.CadastroDisciplina, name='CadastroDisciplina'),
+  url(r'^CadastroConteudo/', views.CadastroConteudo, name='CadastroConteudo'),
   url(r'^login/', views.login, name='login'),
   url(r'^ajuda/', views.ajuda, name='ajuda'),
-  url(r'^chat/', views.chat, name='chat'),
-  url(r'^CadastroConteudo/', views.CadastroConteudo, name='CadastroConteudo'),
   url(r'^CadastroFase/', views.CadastroFase, name='CadastroFase'),
-
+  url(r'^chat/', views.chat, name='chat'),
 ]

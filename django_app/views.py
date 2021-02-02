@@ -13,13 +13,16 @@ def CadastroDisciplina(request):
 
 def CadastroConteudo(request):
     return render(request, 'django/CadastroConteudo.html')
-    
+
 def login(request):
     return render(request, 'django/login.html')
 
 def ajuda(request):
     return render(request, 'django/ajuda.html')
 
+def CadastroFase(request):
+    return render(request, 'django/CadastroFase.html')
+  
 def chat(request):
     return render(request, 'django/chat.html')
 
