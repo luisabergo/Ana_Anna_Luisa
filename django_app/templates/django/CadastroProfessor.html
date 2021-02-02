@@ -5,6 +5,14 @@
 <head>
     <title>SGICE</title>
     <link rel='stylesheet' href='{% static "css/form.css" %}' />
+
+	<script type="text/javascript">
+		$("#calculo").click(function() {
+  		if ($("#prof").prop("checked")) {
+    		$("#Prof").css("display", "block")
+  }
+})
+	</script>  
     
 </head>
 
@@ -13,23 +21,35 @@
 
     <div class="container">
 	
-		<form class="form-signin">
-		    <h2 class="form-signin-heading">Cadastro Professor</h2>
-		    <label for="nome" class="sr-only">Nome:</label>
-		    <input type="text" id="nome_professor" class="form-control" placeholder="Nome" required autofocus>
+		<form class="form-signin" id="formulario" name="formulario">
+			<h2 class="form-signin-heading">Cadastro Professor</h2>
+			
+		    <input type="radio" id="prof" name="user" value="prof" >
+  		    <label for="prof">Professor</label><br>
+            <input type="radio" id="aluno" name="user" value="aluno">
+			<label for="aluno">Aluno</label><br>
+			
+			<div id="Prof">
+		    <input type="text" id="nome_professor" class="form-control" placeholder="Nome" required autofocus style="display:none">
 		    <br>
-		    <label for="endereco" class="sr-only">SIAPE:</label>
-		    <input type="text" id="siape" class="form-control" placeholder="SIAPE" required>
+		    <label for="siape" class="sr-only">SIAPE:</label>
+		    <input type="text" id="siape" class="form-control" placeholder="SIAPE" required style="display:none">
 		    <br>
-		    <label for="cpf" class="sr-only">E-mail:</label>
-		    <input type="text" id="email_professor" class="form-control" placeholder="E-mail" required>
+		    <label for="email" class="sr-only">E-mail:</label>
+		    <input type="text" id="email_professor" class="form-control" placeholder="E-mail" required style="display:none">
 		    <br>
-		    <label for="cpf" class="sr-only">senha:</label>
-		    <input type="text" id="senha_professor" class="form-control" placeholder="Senha" required>
+		    <label for="senha" class="sr-only">senha:</label>
+		    <input type="text" id="senha_professor" class="form-control" placeholder="Senha" required style="display:none">
 		    <br>
-		    <button class="btn btn-success" type="submit">Cadastrar</button>
+			<button class="btn btn-success" type="submit">Cadastrar</button> 
+		    </div>
+                    
+		    
 		</form>
     </div>
 </body>
 
 </html>
+
+
+

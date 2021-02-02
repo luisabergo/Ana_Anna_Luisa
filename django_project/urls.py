@@ -21,5 +21,7 @@ urlpatterns = [
   url(r'^django_app/', include('django_app.urls')),
   url(r'^CadastroProfessor/', views.CadastroProfessor, name='CadastroProfessor'),
   url(r'^CadastroDisciplina/', views.CadastroDisciplina, name='CadastroDisciplina'),
+  url(r'^CadastroConteudo/', views.CadastroConteudo, name='CadastroConteudo'),
+
 
 ]
