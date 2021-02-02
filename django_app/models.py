@@ -29,8 +29,8 @@ class Categoria(models.Model):
         return ('ver_categoria_blog', None, { 'slug': self.url })
 
 class Aluno(models.Model):
-    titulo = models.CharField(max_length=100, db_index=True)
-    url = models.SlugField(max_length=100, db_index=True)
+    nome = models.CharField(max_length=100, db_index=True)
+    pontuacao = models.IntegerField()
 
     def __unicode__(self):
         return '%s' % self.titulo
@@ -40,8 +40,8 @@ class Aluno(models.Model):
         return ('ver_aluno_blog', None, { 'slug': self.url })
         
 class Professor(models.Model):
-    titulo = models.CharField(max_length=100, db_index=True)
-    url = models.SlugField(max_length=100, db_index=True)
+    nome = models.CharField(max_length=100, db_index=True)
+    siape = models.CharField(max_length=100, db_index=True)
 
     def __unicode__(self):
         return '%s' % self.titulo
@@ -52,7 +52,7 @@ class Professor(models.Model):
         
         
 class Disciplina(models.Model):
-    titulo = models.CharField(max_length=100, db_index=True)
+    nome = models.CharField(max_length=100, db_index=True)
     url = models.SlugField(max_length=100, db_index=True)
 
     def __unicode__(self):
