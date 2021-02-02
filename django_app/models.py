@@ -28,32 +28,11 @@ class Categoria(models.Model):
     def get_url_absoluta(self):
         return ('ver_categoria_blog', None, { 'slug': self.url })
 
-class Aluno(models.Model):
-    nome = models.CharField(max_length=100, db_index=True)
-    pontuacao = models.IntegerField()
-
-    def __unicode__(self):
-        return '%s' % self.titulo
-
-    @permalink
-    def get_url_absoluta(self):
-        return ('ver_aluno_blog', None, { 'slug': self.url })
-        
-class Professor(models.Model):
-    nome = models.CharField(max_length=100, db_index=True)
-    siape = models.CharField(max_length=100, db_index=True)
-
-    def __unicode__(self):
-        return '%s' % self.titulo
-
-    @permalink
-    def get_url_absoluta(self):
-        return ('ver_professor_blog', None, { 'slug': self.url })
-        
-        
 class Disciplina(models.Model):
-    nome = models.CharField(max_length=100, db_index=True)
+    nome_disc = models.CharField(max_length=100, db_index=True)
     url = models.SlugField(max_length=100, db_index=True)
+    descricao = models.CharField(max_length=100, db_index=True)
+    horario = models.CharField(max_length=100, db_index=True)
 
     def __unicode__(self):
         return '%s' % self.titulo
@@ -61,3 +40,21 @@ class Disciplina(models.Model):
     @permalink
     def get_url_absoluta(self):
         return ('ver_disciplina_blog', None, { 'slug': self.url })
+        
+        
+class Usuario(models.Model):
+	name=models.CharField(max_length=20)
+	email=models.EmailField(max_length=20)
+	address=models.TextField(max_length=20)
+	password = models.CharField(max_length=20)
+
+	class Meta:
+        	abstract=True
+
+class Professor(Usuario):
+	phone=models.IntegerField(max_length=15)
+	siape = models.CharField(max_length=100, db_index=True)
+	
+class Aluno(Usuario):
+    	pontuacao = models.IntegerField()
+    	matricula = models.CharField(max_length=100, db_index=True)
