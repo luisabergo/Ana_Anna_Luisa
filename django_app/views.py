@@ -23,3 +23,6 @@ def ajuda(request):
 
 def CadastroFase(request):
     return render(request, 'django/CadastroFase.html')
+  
+def chat(request):
+    return render(request, 'django/chat.html')

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- Nova linha que carrega os arquivos estáticos -->
+<head>
+<link rel='stylesheet' href='{% static "css/chat.css" %}' />
+{% include "django/cabecalho.html" %}
+</head>
+<body>
+<div class="container">
+<div class="messaging">
+      <div class="inbox_msg">
+        <div class="inbox_people">
+          <div class="headind_srch">
+            <div class="recent_heading">
+              <h4>Conversas</h4>
+            </div>
+            
+          </div>
+          <div class="inbox_chat">
+            <div class="chat_list active_chat">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="{% static 'img/login.png' %}" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Matéria 1 <span class="chat_date">02/02/2021</span></h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel turpis dignissim, rutrum sem a, fermentum justo. In vitae neque urna. Vivamus vitae vestibulum dolor.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="chat_list">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="{% static 'img/login.png' %}" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Matéria 2 <span class="chat_date">02/02/2021</span></h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel turpis dignissim, rutrum sem a, fermentum justo. In vitae neque urna. Vivamus vitae vestibulum dolor.</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat_list">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="{% static 'img/login.png' %}" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Matéria 3 <span class="chat_date">02/02/2021</span></h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel turpis dignissim, rutrum sem a, fermentum justo. In vitae neque urna. Vivamus vitae vestibulum dolor.</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat_list">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="{% static 'img/login.png' %}" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Matéria 4 <span class="chat_date">02/02/2021</span></h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel turpis dignissim, rutrum sem a, fermentum justo. In vitae neque urna. Vivamus vitae vestibulum dolor.</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat_list">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="{% static 'img/login.png' %}" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Matéria 5 <span class="chat_date">02/02/2021</span></h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel turpis dignissim, rutrum sem a, fermentum justo. In vitae neque urna. Vivamus vitae vestibulum dolor.</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat_list">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="{% static 'img/login.png' %}" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Matéria 6 <span class="chat_date">02/02/2021</span></h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel turpis dignissim, rutrum sem a, fermentum justo. In vitae neque urna. Vivamus vitae vestibulum dolor.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mesgs">
+          <div class="msg_history">
+            <div class="incoming_msg">
+              <div class="incoming_msg_img"> <img src="{% static 'img/login.png' %}" alt="sunil"> </div>
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel turpis dignissim, rutrum sem a, fermentum justo. In vitae neque urna. Vivamus vitae vestibulum dolor.</p>
+                  <span class="time_date">12:00</span></div>
+              </div>
+            </div>
+            <div class="outgoing_msg">
+              <div class="sent_msg">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel turpis dignissim, rutrum sem a, fermentum justo. In vitae neque urna. Vivamus vitae vestibulum dolor.</p>
+                <span class="time_date">12:00</span> </div>
+            </div>
+            <div class="incoming_msg">
+              <div class="incoming_msg_img"> <img src="{% static 'img/login.png' %}" alt="sunil"> </div>
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel turpis dignissim, rutrum sem a, fermentum justo. In vitae neque urna. Vivamus vitae vestibulum dolor.</p>
+                  <span class="time_date">12:00</span></div>
+              </div>
+            </div>
+            <div class="outgoing_msg">
+              <div class="sent_msg">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel turpis dignissim, rutrum sem a, fermentum justo. In vitae neque urna. Vivamus vitae vestibulum dolor.</p>
+                <span class="time_date">12:00</span> </div>
+            </div>
+            <div class="incoming_msg">
+              <div class="incoming_msg_img"> <img src="{% static 'img/login.png' %}" alt="sunil"> </div>
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel turpis dignissim, rutrum sem a, fermentum justo. In vitae neque urna. Vivamus vitae vestibulum dolor.</p>
+                  <span class="time_date"> 12:00</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="type_msg">
+            <div class="input_msg_write">
+              <input type="text" class="write_msg"/>
+
+</button>
+            </div>
+          </div>
+        </div>
+      </div>   
+    </div></div>
+    </body>

@@ -25,4 +25,4 @@ urlpatterns = [
   url(r'^login/', views.login, name='login'),
   url(r'^ajuda/', views.ajuda, name='ajuda'),
   url(r'^CadastroFase/', views.CadastroFase, name='CadastroFase'),
-]
+  url(r'^chat/', views.chat, name='chat'),
