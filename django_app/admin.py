@@ -10,3 +10,6 @@ class CategoriaAdmin(admin.ModelAdmin):
 
 admin.site.register(Blog)
 admin.site.register(Categoria)
+admin.site.register(Aluno)
+admin.site.register(Professor)
+admin.site.register(Disciplina)
