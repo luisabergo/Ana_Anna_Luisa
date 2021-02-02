@@ -5,12 +5,9 @@ def index(request):
     return render(request, 'django/index.html')
 
 
-def CadastroProfessor(request):
-    return render(request, 'django/CadastroProfessor.html')
+def CadastroUsuario(request):
+    return render(request, 'django/CadastroUsuario.html')
 
-
-def CadastroAluno(request):
-    return render(request, 'django/CadastroAluno.html')
 
 def CadastroDisciplina(request):
     return render(request, 'django/CadastroDisciplina.html')
@@ -23,3 +20,6 @@ def login(request):
 
 def ajuda(request):
     return render(request, 'django/ajuda.html')
+
+def CadastroFase(request):
+    return render(request, 'django/CadastroFase.html')

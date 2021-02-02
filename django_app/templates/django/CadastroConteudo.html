@@ -3,35 +3,118 @@
 <html>
 
 <head>
-    <title>SGICE</title>
-    <link rel='stylesheet' href='{% static "css/form.css" %}' />
-    
+	<title>SGICE</title>
+	<link rel='stylesheet' href='{% static "css/form.css" %}' />
+
 </head>
 
 <body>
-    {% include "django/cabecalho.html" %}
+	{% include "django/cabecalho.html" %}
 
-    <div class="container">
-	
-		<form class="form-signin">
-		    <h2 class="form-signin-heading">Cadastrar Conteúdo</h2>
-		    <label for="titulo" class="sr-only">Título:</label>
-		    <input type="text" id="titulo_exercicio" class="form-control" placeholder="Título" required autofocus>
-		    <br>
-		    <label for="pontuacao" class="sr-only">Pontuação:</label>
-		    <input type="text" id="pontuacao" class="form-control" placeholder="Pontuação" required>
-		    <br>
-		    <select name="tipo_conteudo" class="form-control">
-                <option value="" selected>Selecione uma opção</option>
-                <option value="video_aula">Vídeo Aula</option>
-                <option value="conteudo_texto" >Conteúdo textual</option>
-                <option value="exercicio">Exercício</option>
-              </select>
-		    <br>
-		    
-		    <button class="btn btn-success" type="submit">Cadastrar</button>
+	<div class="container">
+
+		<form onchange="myFunction();">
+			<h2 class="form-signin-heading">Cadastrar Conteúdo</h2>
+			<label for="titulo" class="sr-only">Título:</label>
+			<input type="text" id="titulo_exercicio" class="form-control" placeholder="Título" required autofocus>
+			<br>
+			<label for="pontuacao" class="sr-only">Pontuação:</label>
+			<input type="text" id="pontuacao" class="form-control" placeholder="Pontuação" required>
+			<br>
+			<select name="tipo_conteudo" class="form-control" style="width:650px;" id="tipo_conteudo">
+				<option value="" selected>Selecione uma opção</option>
+				<option value="video_aula">Vídeo Aula</option>
+				<option value="texto">Conteúdo textual</option>
+				<option value="exercicio">Exercício</option>
+			</select>
+			<br>
 		</form>
-    </div>
+
+		<div id="video_aula" class="form" style="display:none;">
+			<input type="file" placeholder="Upload Vídeo Aula" name="video_aula" required="required">
+			<br>
+
+		</div>
+
+		<div id="texto" class="form" style="display:none;">
+			<input type="textarea" placeholder="Insira o texto aqui" name="video_aula" required="required"
+				style="width:650px; height: 150px;">
+			<br>
+			<br>
+
+		</div>
+
+		<form onchange="myFunction1();">
+		<div id="exercicio" class="form" style="display:none;">
+			<input type='checkbox' id='div1' name='exerc[]' value='1'>
+			<label for='div1'>Exercício de múltipla escolha</label>
+			<div id='m1' hidden>
+				<input type='radio' id='A' name='exerc[]' value='A'>
+				<label for='div'>Resposta A</label>
+				<br>
+				<input type='radio' id='B' name='exerc[]' value='B'>
+				<label for='div'>Resposta B</label>
+				<br>
+				<input type='radio' id='C' name='exerc[]' value='C'>
+				<label for='div'>Resposta C</label>
+				<br>
+				<input type='radio' id='D' name='exerc[]' value='D'>
+				<label for='div'>Resposta D</label>
+				<br>
+			</div>
+			<br>
+
+			<input type='checkbox' id='div2' name='exerc[]' value='1'>
+			<label for='div2'>Exercício com resposta discursiva</label>
+			<div id='m2' hidden>
+				<input type="textarea" placeholder="Insira a resposta aqui" name="resp_exerc" required="required"
+					style="width:650px; height: 150px;">
+				<br>
+				<br>
+			</div>
+		</div>
+		</form>
+
+		<button class="btn btn-success" type="submit">Cadastrar</button>
+
+
+		<br>
+
+		<script>
+			function myFunction() {
+				var select = document.getElementById("tipo_conteudo");
+				var formularios = document.querySelectorAll('.form');
+				select.onchange = function () {
+					for (var i = 0; i < formularios.length; i++) formularios[i].style.display = 'none';
+					var divID = select.options[select.selectedIndex].value;
+					var div = document.getElementById(divID);
+					div.style.display = 'block';
+				};
+			}
+		</script>
+
+
+		<script>
+			function myFunction1() {
+				var $radio1 = document.getElementById("div1");
+				var $div1 = document.getElementById("m1");
+				var $radio2 = document.getElementById("div2");
+				var $div2 = document.getElementById("m2");
+				if ($radio1.checked) {
+					$div1.removeAttribute("hidden");
+				} else {
+					$div1.setAttribute("hidden", "hidden");
+				}
+				if ($radio2.checked) {
+					$div2.removeAttribute("hidden");
+				} else {
+					$div2.setAttribute("hidden", "hidden");
+				}
+			}
+		</script>
+
+
+	</div>
 </body>
 
 </html>
