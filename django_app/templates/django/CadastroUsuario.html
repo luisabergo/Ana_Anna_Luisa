@@ -1,0 +1,91 @@
+<!DOCTYPE html> {% load staticfiles %}
+
+<html>
+
+<head>
+	<title>SGICE</title>
+	<link rel='stylesheet' href='{% static "css/form.css" %}' />
+
+
+	<script type="text/javascript">
+		let radio = document.querySelectorAll(".rd");
+
+		for (let i = 0; i < radio.length; i++) {
+			radio[i].onclick = function () {
+				let div = document.querySelectorAll('.onOff');
+				for (let i = 0; i < div.length; i++) div[i].style.display = 'none';
+				document.getElementById('e' + radio[i].id).style.display = "block";
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+	{% include "django/cabecalho.html" %}
+
+	<div class="container">
+		<form onchange="myFunction();">
+			<h2 class="form-signin-heading">Cadastro Usuário</h2>
+			<input type='radio' id='div1' name='user[]' value='1'>
+			<label for='div1'>Aluno</label>
+			<div id='m1' hidden>
+				<label for="nome_aluno" class="sr-only">Nome:</label>
+				<input type="text" id="nome_aluno" class="form-control" placeholder="Nome" required autofocus>
+				<br>
+				<label for="matrícula" class="sr-only">Matrícula:</label>
+				<input type="text" id="matrícula" class="form-control" placeholder="Matrícula" required>
+				<br>
+				<label for="email_aluno" class="sr-only">E-mail:</label>
+				<input type="text" id="email_aluno" class="form-control" placeholder="E-mail" required>
+				<br>
+				<label for="senha_aluno" class="sr-only">senha:</label>
+				<input type="text" id="senha_professor" class="form-control" placeholder="Senha" required>
+				<br>
+				<button class="btn btn-success" type="submit">Cadastrar</button>
+			</div>
+			<br>
+			<input type='radio' id='div2' name='user[]' value='2'>
+			<label for='div2'>Professor</label>
+			<div id='m2' hidden>
+				<label for="nome_professor" class="sr-only">Nome:</label>
+				<input type="text" id="nome_professor" class="form-control" placeholder="Nome" required autofocus>
+				<br>
+				<label for="siape" class="sr-only">SIAPE:</label>
+				<input type="text" id="siape" class="form-control" placeholder="SIAPE" required>
+				<br>
+				<label for="email" class="sr-only">E-mail:</label>
+				<input type="text" id="email_professor" class="form-control" placeholder="E-mail">
+				<br>
+				<label for="senha" class="sr-only">senha:</label>
+				<input type="text" id="senha_professor" class="form-control" placeholder="Senha">
+				<br>
+				<button class="btn btn-success" type="submit">Cadastrar</button>
+			</div>
+		</form>
+
+		<script>
+			function myFunction() {
+				var $radio1 = document.getElementById("div1");
+				var $div1 = document.getElementById("m1");
+				var $radio2 = document.getElementById("div2");
+				var $div2 = document.getElementById("m2");
+				if ($radio1.checked) {
+					$div1.removeAttribute("hidden");
+				} else {
+					$div1.setAttribute("hidden", "hidden");
+				}
+				if ($radio2.checked) {
+					$div2.removeAttribute("hidden");
+				} else {
+					$div2.setAttribute("hidden", "hidden");
+				}
+			}
+		</script>
+
+
+	</div>
+</body>
+
+
+</html>
