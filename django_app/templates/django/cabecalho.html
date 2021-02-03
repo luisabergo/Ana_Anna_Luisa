@@ -4,7 +4,7 @@
 
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+<title>SGICE</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel='stylesheet' href='{% static "css/cabecalho.css" %}' />
@@ -17,50 +17,75 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand">SGICE</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/django_app/">SGICE</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="/django_app/">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Inserir <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="/CadastroProfessor/">Usuário</a></li>
-          <li><a href="/CadastroDisciplina/">Disciplina</a></li>
-          <li><a href="#">Fase</a></li>
-          <li><a href="#">Conteúdo</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Equipes</a></li>
-      <li><a href="#">Medalhas</a></li>
-    </ul>
-     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Inserir <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+		<li><a href="/CadastroDisciplina/">Disciplina</a></li>
+          <li><a href="/CadastroFase/">Fase</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Opções <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+		<li><a href="/ajuda/">Ajuda</a></li>
+      <li><a href="/chat/">Chat</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><form class="navbar-form navbar-left" action="">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Pesquisa" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form></li>
+        <li><a href="/CadastroProfessor/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 <div class="fab">
   <button class="main">
   </button>
   <ul>
+  <a href="/video/">
     <li>
       <label for="opcao1">Vídeo</label>
       <button id="opcao1">
       &#127909;
       </button>
-    </li>
+    </li></a>
+      <a href="/texto/">
     <li>
       <label for="opcao2">Texto</label>
       <button id="opcao2">
      		 &#128214;
       </button>
-    </li>
+    </li></a>
+      <a href="/CadastroConteudo/">
     <li>
       <label for="opcao3">Exercício</label>
       <button id="opcao3">
       &#128221;
       </button>
-    </li>
+    </li></a>
   </ul>
 </div>
+
 </body>
 </html>

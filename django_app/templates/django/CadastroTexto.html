@@ -1,0 +1,40 @@
+<!DOCTYPE html> {% load staticfiles %}
+
+<html>
+
+<head>
+	<title>SGICE</title>
+	<link rel='stylesheet' href='{% static "css/form.css" %}' />
+
+</head>
+
+<body>
+	{% include "django/cabecalho.html" %}
+
+	<div class="container">
+
+		<form onchange="myFunction();">
+			<h2 class="form-signin-heading">Cadastrar Texto</h2>
+			<label for="titulo" class="sr-only">Título:</label>
+			<input type="text" id="titulo_exercicio" class="form-control" placeholder="Título" required autofocus>
+			<br>
+			<label for="pontuacao" class="sr-only">Pontuação:</label>
+			<input type="text" id="pontuacao" class="form-control" placeholder="Pontuação" required>
+			<br>
+		</form>
+		<div id="texto" class="form" >
+			<input type="textarea" placeholder="Insira o texto aqui" name="video_aula" required="required"
+				style="width:650px; height: 150px;">
+			<br>
+			<br>
+
+		</div>
+
+		<button class="btn btn-success" type="submit">Cadastrar</button>
+
+
+		<br>
+
+	</div>
+</body>
+</html>

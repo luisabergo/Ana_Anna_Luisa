@@ -16,10 +16,17 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django_app import views
+
 urlpatterns = [
   url(r'^admin/', include(admin.site.urls)),
   url(r'^django_app/', include('django_app.urls')),
-  url(r'^CadastroProfessor/', views.CadastroProfessor, name='CadastroProfessor'),
+  url(r'^CadastroProfessor/', views.CadastroUsuario, name='CadastroUsuario'),
   url(r'^CadastroDisciplina/', views.CadastroDisciplina, name='CadastroDisciplina'),
-
+  url(r'^CadastroConteudo/', views.CadastroConteudo, name='CadastroConteudo'),
+  url(r'^login/', views.login, name='login'),
+  url(r'^ajuda/', views.ajuda, name='ajuda'),
+  url(r'^CadastroFase/', views.CadastroFase, name='CadastroFase'),
+  url(r'^chat/', views.chat, name='chat'),
+  url(r'^video/', views.CadastroVideo, name='CadastroVideo'),
+  url(r'^texto/', views.CadastroTexto, name='CadastroTexto'),
 ]
