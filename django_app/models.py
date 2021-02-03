@@ -35,26 +35,37 @@ class Disciplina(models.Model):
     horario = models.CharField(max_length=100, db_index=True)
 
     def __unicode__(self):
-        return '%s' % self.titulo
+        return '%s' % self.nome_disc
 
     @permalink
     def get_url_absoluta(self):
         return ('ver_disciplina_blog', None, { 'slug': self.url })
-        
-        
+
 class Usuario(models.Model):
-	name=models.CharField(max_length=20)
-	email=models.EmailField(max_length=20)
-	address=models.TextField(max_length=20)
-	password = models.CharField(max_length=20)
+    nome = models.CharField(max_length=100, db_index=True)
+    email = models.EmailField()
+    def __unicode__(self):
+        return '%s' % self.nome
+    @permalink
+    def get_url_absoluta(self):
+        return ('ver_usuario_blog', None, { })
 
-	class Meta:
-        	abstract=True
+class Professor(models.Model):
+    phone = models.IntegerField(max_length=15)
+    siape = models.CharField(max_length=100, db_index=True)
 
-class Professor(Usuario):
-	phone=models.IntegerField(max_length=15)
-	siape = models.CharField(max_length=100, db_index=True)
-	
-class Aluno(Usuario):
-    	pontuacao = models.IntegerField()
-    	matricula = models.CharField(max_length=100, db_index=True)
+    def __unicode__(self):
+        return '%s' % self.siape
+    @permalink
+    def get_url_absoluta(self):
+        return ('ver_professor_blog', None, { })
+
+class Aluno(models.Model):
+    pontuacao = models.FloatField()
+    matricula = models.CharField(max_length=100, db_index=True)
+    def __unicode__(self):
+        return '%s' % self.matricula
+    @permalink
+    def get_url_absoluta(self):
+        return ('ver_aluno_blog', None, { })
+    
