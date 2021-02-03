@@ -8,13 +8,12 @@ def index(request):
 def CadastroUsuario(request):
     return render(request, 'django/CadastroUsuario.html')
 
-
 def CadastroDisciplina(request):
     return render(request, 'django/CadastroDisciplina.html')
 
 def CadastroConteudo(request):
     return render(request, 'django/CadastroConteudo.html')
-  
+
 def login(request):
     return render(request, 'django/login.html')
 
@@ -26,3 +25,6 @@ def CadastroFase(request):
   
 def chat(request):
     return render(request, 'django/chat.html')
+
+def CadastroFase(request):
+    return render(request, 'django/CadastroFase.html')

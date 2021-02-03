@@ -11,22 +11,36 @@
 <body>
     {% include "django/cabecalho.html" %}
 
-    <div class="container">
-	
-		<form class="form-signin">
-		    <h2 class="form-signin-heading">Formulário</h2>
-		    <label for="nome" class="sr-only">Nome:</label>
-		    <input type="text" id="nome" class="form-control" placeholder="Nome" required autofocus>
-		    <br>
-		    <label for="endereco" class="sr-only">Endereço:</label>
-		    <input type="text" id="endereco" class="form-control" placeholder="Endereço" required>
-		    <br>
-		    <label for="cpf" class="sr-only">CPF:</label>
-		    <input type="text" id="cpf" class="form-control" placeholder="CPF" required>
-		    <br>
-		    <button class="btn btn-success" type="submit">Enviar</button>
-		</form>
-    </div>
+
+
+<div class="container mt-5 mb-5">
+	<div class="row">
+		<div class="col-md-6 offset-md-3">
+			<h2>Notícias recentes</h2>
+			<ul class="timeline">
+				<li>
+					<a href="#">Matéria 1</a>,
+					<a href="#" class="float-right">02 de fevereiro de 2021</a>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula.</p>
+				</li>
+				<li>
+					<a target="_blank" href="#">Matéria 2</a>,
+					<a href="#" class="float-right">02 de fevereiro de 2021</a>
+		
+					<p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin.</p>
+				</li>
+				<li>
+					<a target="_blank" href="#">Matéria 3</a>,
+					<a href="#" class="float-right">02 de fevereiro de 2021</a>
+		
+					<p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh.</p>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
+
 </body>
 
 </html>
