@@ -37,3 +37,6 @@ def Perfil(request):
 
 def InserirComentario(request):
     return render(request, 'django/InserirComentario.html')
+
+def TelaMatricula(request):
+    return render(request, 'django/TelaMatricula.html')
