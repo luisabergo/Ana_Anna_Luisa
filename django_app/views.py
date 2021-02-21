@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response, get_object_or_404
+from django_app.models import Blog, Categoria
 from django.http import HttpResponse
 
 def index(request):
@@ -25,12 +26,14 @@ def CadastroFase(request):
   
 def chat(request):
     return render(request, 'django/chat.html')
-
-def CadastroFase(request):
-    return render(request, 'django/CadastroFase.html')
-
 def CadastroVideo(request):
     return render(request, 'django/ConteudoVideo.html')
 
 def CadastroTexto(request):
     return render(request, 'django/CadastroTexto.html')
+    
+def Perfil(request):
+    return render(request, 'django/perfil.html')
+
+def InserirComentario(request):
+    return render(request, 'django/InserirComentario.html')

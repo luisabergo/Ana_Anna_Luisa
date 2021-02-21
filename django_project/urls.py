@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django_app import views
+
 urlpatterns = [
   url(r'^admin/', include(admin.site.urls)),
   url(r'^django_app/', include('django_app.urls')),
@@ -28,4 +29,7 @@ urlpatterns = [
   url(r'^chat/', views.chat, name='chat'),
   url(r'^video/', views.CadastroVideo, name='CadastroVideo'),
   url(r'^texto/', views.CadastroTexto, name='CadastroTexto'),
+  url(r'^perfil/', views.Perfil, name='Perfil'),
+  url(r'^InserirComentario/', views.InserirComentario, name='InserirComentario'),
+
 ]

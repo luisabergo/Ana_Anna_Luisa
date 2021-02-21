@@ -1,0 +1,16 @@
+body {background: grey;padding: 40px}
+
+.comment_div {
+    background: white;
+    width: 250px;
+    padding: 10px;
+    display: block;
+}
+
+.pointer {
+    border: solid 20px transparent;
+    border-right-color: #fff;
+    position: absolute;
+    margin: 40px 0 0 -38px;
+    z-index: 999;
+}
