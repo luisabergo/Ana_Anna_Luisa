@@ -31,3 +31,6 @@ def CadastroVideo(request):
 
 def CadastroTexto(request):
     return render(request, 'django/CadastroTexto.html')
+    
+def Perfil(request):
+    return render(request, 'django/perfil.html')

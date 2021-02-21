@@ -29,4 +29,5 @@ urlpatterns = [
   url(r'^chat/', views.chat, name='chat'),
   url(r'^video/', views.CadastroVideo, name='CadastroVideo'),
   url(r'^texto/', views.CadastroTexto, name='CadastroTexto'),
+  url(r'^perfil/', views.Perfil, name='Perfil'),
 ]
