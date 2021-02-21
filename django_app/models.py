@@ -51,7 +51,7 @@ class Usuario(models.Model):
         return ('ver_usuario_blog', None, { })
 
 class Professor(models.Model):
-    phone = models.IntegerField(max_length=15)
+    phone = models.CharField(max_length=15)
     siape = models.CharField(max_length=100, db_index=True)
 
     def __unicode__(self):
