@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- Nova linha que carrega os arquivos estáticos -->
+<script type="text/javascript">
+function Nova()
+{
+	location.href= "/django_app/"
+}
+</script>
+  <link rel='stylesheet' href='{% static "css/login.css" %}' />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+<br>
+    <!-- Icon -->
+    <div class="user">
+      <img src="{% static 'img/login.png' %}" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Matrícula/SIAPE">
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="Senha">
+      <input type="button" onClick="Nova()" class="fadeIn fourth" value="Login"> 
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Esqueceu sua senha?</a>
+    </div>
+
+  </div>
+</div>

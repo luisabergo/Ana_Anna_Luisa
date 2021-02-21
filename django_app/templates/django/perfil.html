@@ -1,0 +1,97 @@
+{% load staticfiles %} <!-- Nova linha que carrega os arquivos estáticos -->
+{% include "django/cabecalho.html" %}
+<script type="text/javascript">
+$(document).ready(function() {
+    var panels = $('.user-infos');
+    var panelsButton = $('.dropdown-user');
+    panels.hide();
+
+    //Click dropdown
+    panelsButton.click(function() {
+        //get data-for attribute
+        var dataFor = $(this).attr('data-for');
+        var idFor = $(dataFor);
+
+        //current button
+        var currentButton = $(this);
+        idFor.slideToggle(400, function() {
+            //Completed slidetoggle
+            if(idFor.is(':visible'))
+            {
+                currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
+            }
+            else
+            {
+                currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
+            }
+        })
+    });
+
+
+    $('[data-toggle="tooltip"]').tooltip();
+
+    $('button').click(function(e) {
+        e.preventDefault();
+        alert("This is a demo.\n :-)");
+    });
+});
+</script>
+    <link rel='stylesheet' href='{% static "css/perfil.css" %}' />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">PERFIL</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="teste" align="center">       <img src="{% static 'img/login.png' %}" id="icon" alt="User Icon" /> </div>
+                
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Nome:</td>
+                        <td>João da Silva</td>
+                      </tr>
+                      <tr>
+                        <td>Data de Nascimento:</td>
+                        <td>01/01/1990</td>
+                      </tr>
+                   
+                         <tr>
+                             <tr>
+                        <td>Matrícula</td>
+                        <td>xxxxxxxxxx</td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:info@support.com">joao@estudante.ufjf.br</a></td>
+                      </tr>
+                        <td>Matérias:</td>
+                        <td>Cálculo 2<br><br>Física 1
+                        </td>
+                           
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+                  
+                  <a href="#" class="btn btn-primary">Pontuação</a>
+                  <a href="#" class="btn btn-primary">Ranking</a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
