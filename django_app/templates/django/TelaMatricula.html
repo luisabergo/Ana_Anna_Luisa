@@ -21,43 +21,49 @@
                 <option value="fla">Disciplina 2</option>
                 <option value="flu">Disciplina 3</option>
             </select>
-            <br>
-            <input type="checkbox" name="checkbox-1" id="checkbox-1" />
-            <label for='div'>João da Silva</label>
-            <br>
-            <input type="checkbox" name="checkbox-2" id="checkbox-2" />
-            <label for='div'>Maria Joaquina</label>
-            <br>
-            <br>
-            <!-- select all boxes -->
-            <input type="checkbox" name="select-all" id="select-all" />
-            <label for='div'>Selecionar Todos</label>
-
-
-            <br>
         </div>
-        <br>
+            <br>
+            <div id='m1' class="form">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2>Alunos</h2>
+                        <input type="checkbox" name="checkbox-1" id="checkbox-1" />
+                        <label for='div'>João da Silva</label>
+                        <br>
+                        <input type="checkbox" name="checkbox-2" id="checkbox-2" />
+                        <label for='div'>Maria Joaquina</label>
+                        <br>
+                        <br>
+                        <!-- select all boxes -->
+                        <input type="checkbox" name="select-all" id="select-all" />
+                        <label for='div'>Selecionar Todos</label>
+                </div>
+            </div>
+        </div>
+    <br>
+   
+    <br>
 
-        </form>
-        <button class="btn btn-success" type="submit">Comentar</button>
+    </form>
+    <button class="btn btn-success" type="submit">Matricular</button>
 
-
-        <br>
-        <script>
-            // Listen for click on toggle checkbox
-            $('#select-all').click(function (event) {
-                if (this.checked) {
-                    // Iterate each checkbox
-                    $(':checkbox').each(function () {
-                        this.checked = true;
-                    });
-                } else {
-                    $(':checkbox').each(function () {
-                        this.checked = false;
-                    });
-                }
-            });
-        </script>
+</div>
+    <br>
+    <script>
+        // Listen for click on toggle checkbox
+        $('#select-all').click(function (event) {
+            if (this.checked) {
+                // Iterate each checkbox
+                $(':checkbox').each(function () {
+                    this.checked = true;
+                });
+            } else {
+                $(':checkbox').each(function () {
+                    this.checked = false;
+                });
+            }
+        });
+    </script>
 
     </div>
 </body>
