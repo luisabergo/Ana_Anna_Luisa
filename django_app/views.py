@@ -28,3 +28,9 @@ def chat(request):
 
 def CadastroFase(request):
     return render(request, 'django/CadastroFase.html')
+
+def CadastroVideo(request):
+    return render(request, 'django/ConteudoVideo.html')
+
+def CadastroTexto(request):
+    return render(request, 'django/CadastroTexto.html')
