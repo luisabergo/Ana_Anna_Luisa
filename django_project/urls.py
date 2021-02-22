@@ -30,4 +30,5 @@ urlpatterns = [
   url(r'^video/', views.CadastroVideo, name='CadastroVideo'),
   url(r'^texto/', views.CadastroTexto, name='CadastroTexto'),
   url(r'^perfil/', views.Perfil, name='Perfil'),
+  url(r'^progresso/', views.Progresso, name='Progresso'),
 ]
