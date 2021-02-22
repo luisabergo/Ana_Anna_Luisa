@@ -34,3 +34,6 @@ def CadastroTexto(request):
     
 def Perfil(request):
     return render(request, 'django/perfil.html')
+
+def Progresso(request):
+    return render(request, 'django/progresso.html')
