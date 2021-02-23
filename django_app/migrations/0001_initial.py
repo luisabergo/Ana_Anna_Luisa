@@ -40,16 +40,27 @@ class Migration(migrations.Migration):
             name='Disciplina',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
-                ('nome', models.CharField(max_length=100, db_index=True)),
+                ('nome_disc', models.CharField(max_length=100, db_index=True)),
                 ('url', models.SlugField(max_length=100)),
+                ('descricao', models.CharField(max_length=100, db_index=True)),
+                ('horario', models.CharField(max_length=100, db_index=True)),
             ],
         ),
         migrations.CreateModel(
             name='Professor',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
-                ('nome', models.CharField(max_length=100, db_index=True)),
+
+                ('phone', models.CharField(max_length=15)),
                 ('siape', models.CharField(max_length=100, db_index=True)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Usuario',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
+                ('nome', models.CharField(max_length=100, db_index=True)),
+                ('email', models.EmailField(max_length=254)),
             ],
         ),
         migrations.AddField(
