@@ -12,22 +12,12 @@
     {% include "django/cabecalho.html" %}
 
     <div class="container">
-        <form onchange="myFunction1();">
-            <div id="exercicio" class="form">
-                <label>Escolha a disciplina: </label>
-                <select name="disc" class="form-control" id="disc">
-                    <option value="#">Selecione</option>
-                    <option value="disc1">Disciplina 1</option>
-                    <option value="disc2">Disciplina 2</option>
-
-                </select>
-            </div>
-
-            <br>
-            <div id='m1' class="form" style="display:none">
+        <form >
+            
+            <div id='m1' class="form" >
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h2>Alunos Disciplina 1</h2>
+                        <h2>Alunos Cadastrados</h2>
                         <input type="checkbox" name="checkbox-1" id="checkbox-1" />
                         <label for='div'>João da Silva</label>
                         <br>
@@ -45,26 +35,16 @@
                 </div>
             </div>
             <br>
-            <div id='m2' class="form" style="display:none">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <h2>Alunos Disciplina 2</h2>
-                        <input type="checkbox" name="checkbox-1" id="checkbox-1" />
-                        <label for='div'>João da Silva 2</label>
-                        <br>
-                        <input type="checkbox" name="checkbox-2" id="checkbox-2" />
-                        <label for='div'>Maria Joaquina 2</label>
-                        <br>
-                        <input type="checkbox" name="checkbox-2" id="checkbox-2" />
-                        <label for='div'>Teodora Fonseca 2</label>
-                        <br>
-                        <br>
-                        <!-- select all boxes -->
-                        <input type="checkbox" name="select-all2" id="select-all2" />
-                        <label for='div2'>Selecionar Todos</label>
-                    </div>
-                </div>
+            <div id="exercicio" class="form">
+                <label>Escolha a disciplina: </label>
+                <select name="disc" class="form-control" id="disc">
+                    <option value="#">Selecione</option>
+                    <option value="disc1">Disciplina 1</option>
+                    <option value="disc2">Disciplina 2</option>
+
+                </select>
             </div>
+           
             <br>
 
         </form>
@@ -74,25 +54,7 @@
     <br>
     <script type="text/javascript">
 
-        function myFunction1() {
-            var $radio1 = document.getElementById("disc");
-
-            if ($('#disc').val() == "disc1") {
-                $("#m1").show();
-            }
-            else {
-                $("#m1").hide();
-            }
-
-            if ($('#disc').val() == "disc2") {
-                $("#m2").show();
-            }
-            else {
-                $("#m2").hide();
-            }
-
-
-        }
+      
 
         $('#select-all1').click(function (event) {
             if (this.checked) {
@@ -107,18 +69,7 @@
             }
         });
 
-        $('#select-all2').click(function (event) {
-            if (this.checked) {
-                // Iterate each checkbox
-                $(':checkbox').each(function () {
-                    this.checked = true;
-                });
-            } else {
-                $(':checkbox').each(function () {
-                    this.checked = false;
-                });
-            }
-        });
+     
     </script>
 
     </div>
