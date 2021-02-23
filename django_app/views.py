@@ -46,3 +46,6 @@ def TelaMatricula(request):
 
 def Equipe(request):
     return render(request, 'django/equipe.html')
+
+def PontuacaoFinal(request):
+    return render(request, 'django/PontuacaoFinal.html')

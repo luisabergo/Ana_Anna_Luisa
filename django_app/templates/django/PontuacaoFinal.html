@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    {% include "django/cabecalho.html" %}
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="main" class="container-fluid" style="margin-right: 80px">
+            <div id="top" class="row">
+                <h2 class="form-signin-heading">Visualizar pontuação final</h2>
+                <br>
+                <form onchange="myFunction1();">
+                <div id="exercicio" class="form">
+                    <label>Escolha a disciplina: </label>
+                    <select name="disc" class="form-control" id="disc">
+                        <option value="#">Selecione</option>
+                        <option value="disc1">Disciplina 1</option>
+                        <option value="disc2">Disciplina 2</option>
+
+                    </select>
+                </div>
+            </div> <!-- /#top -->
+        </div>
+
+        <hr />
+        <div id="list" class="row">
+            <div id='m1' class="form" style="display:none">
+            <div class="table-responsive col-md-12">
+                <table class="table table-striped" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            
+                            <th>Aluno</th>
+                            <th>Parte 1</th>
+                            <th>Parte 2</th>
+                            <th>Parte 3</th>
+                            <th>Parte 4</th>
+                            <th>Total</th>
+                            <th class="actions"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            
+                            <td>João</td>
+                            <td>10</td>
+                            <td>20</td>
+                            <td>5</td>
+                            <td></td>
+                            <td>35</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Maria</td>
+                            <td>10</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Ana</td>
+                            <td>50</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>30</td>
+                            <td>95</td>
+                        </tr>
+                        <tr>
+                            <td>José</td>
+                            <td>7</td>
+                            <td>20</td>
+                            <td>50</td>
+                            <td>20</td>
+                            <td>97</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+
+            <div id="list" class="row">
+                <div id='m2' class="form" style="display:none">
+                <div class="table-responsive col-md-12">
+                    <table class="table table-striped" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                
+                                <th>Aluno</th>
+                                <th>Parte 1</th>
+                                <th>Parte 2</th>
+                                <th>Parte 3</th>
+                                <th>Parte 4</th>
+                                <th>Total</th>
+                                <th class="actions"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                
+                                <td>Maria</td>
+                                <td>10</td>
+                                <td>20</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>35</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Francisco</td>
+                                <td>10</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>João</td>
+                                <td>50</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>30</td>
+                                <td>95</td>
+                            </tr>
+                            <tr>
+                                <td>Glorinha</td>
+                                <td>7</td>
+                                <td>20</td>
+                                <td>50</td>
+                                <td>20</td>
+                                <td>97</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+
+
+
+        </form>
+
+        </div> <!-- /#list -->
+    </div> <!-- /#bottom -->
+    </div> <!-- /#main -->
+
+    <script type="text/javascript">
+
+        function myFunction1() {
+            var $radio1 = document.getElementById("disc");
+
+            if ($('#disc').val() == "disc1") {
+                $("#m1").show();
+            }
+            else {
+                $("#m1").hide();
+            }
+
+            if ($('#disc').val() == "disc2") {
+                $("#m2").show();
+            }
+            else {
+                $("#m2").hide();
+            }
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
