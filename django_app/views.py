@@ -37,3 +37,9 @@ def Perfil(request):
 
 def Progresso(request):
     return render(request, 'django/progresso.html')
+
+def InserirComentario(request):
+    return render(request, 'django/InserirComentario.html')
+
+def TelaMatricula(request):
+    return render(request, 'django/TelaMatricula.html')
