@@ -33,4 +33,5 @@ urlpatterns = [
   url(r'^progresso/', views.Progresso, name='Progresso'),
   url(r'^InserirComentario/', views.InserirComentario, name='InserirComentario'),
   url(r'^TelaMatricula/', views.TelaMatricula, name='TelaMatricula'),
+  url(r'^Equipe/', views.Equipe, name='Equipe'),
 ]

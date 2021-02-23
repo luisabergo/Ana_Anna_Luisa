@@ -43,3 +43,6 @@ def InserirComentario(request):
 
 def TelaMatricula(request):
     return render(request, 'django/TelaMatricula.html')
+
+def Equipe(request):
+    return render(request, 'django/equipe.html')
