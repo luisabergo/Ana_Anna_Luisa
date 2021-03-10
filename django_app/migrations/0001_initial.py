@@ -14,8 +14,8 @@ class Migration(migrations.Migration):
             name='Aluno',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
-                ('nome', models.CharField(max_length=100, db_index=True)),
-                ('pontuacao', models.IntegerField()),
+                ('pontuacao', models.FloatField()),
+                ('matricula', models.CharField(max_length=100, db_index=True)),
             ],
         ),
         migrations.CreateModel(
@@ -50,7 +50,6 @@ class Migration(migrations.Migration):
             name='Professor',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
-
                 ('phone', models.CharField(max_length=15)),
                 ('siape', models.CharField(max_length=100, db_index=True)),
             ],
